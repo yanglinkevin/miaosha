@@ -90,10 +90,10 @@ public class MiaoshaController implements InitializingBean {
 
         //是否已经秒杀到
         MiaoshaOrder order = orderService.getMiaoshaOrderByUserIdGoodsId(Long.valueOf(user.getNickname()), goodsId);
-        if (order != null) {
-            result.withError(REPEATE_MIAOSHA.getCode(), REPEATE_MIAOSHA.getMessage());
-            return result;
-        }
+//        if (order != null) {
+//            result.withError(REPEATE_MIAOSHA.getCode(), REPEATE_MIAOSHA.getMessage());
+//            return result;
+//        }
         //内存标记，减少redis访问
         boolean over = localOverMap.get(goodsId);
         if (over) {
