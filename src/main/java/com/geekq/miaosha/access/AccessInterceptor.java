@@ -40,6 +40,7 @@ public class AccessInterceptor  extends HandlerInterceptorAdapter{
 		/**
 		 * 获取调用 获取主要方法
 		 */
+		return true;
 		if(handler instanceof HandlerMethod) {
 			logger.info("打印拦截方法handler ：{} ",handler);
 			HandlerMethod hm = (HandlerMethod)handler;
